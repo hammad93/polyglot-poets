@@ -1,0 +1,17 @@
+Authors:
+1- 大雅 (Da Ya)
+2- 孟浩然 (Meng Haoran)
+3- 小雅 (Xiao Ya)
+4- 晏几道 (Yan Jidao)
+5- 曹邺 (Cao Ye)
+6- 李白 (Li Bai)
+7- 李益 (Li Yi) 
+8- 李绅 (Li Shen)
+9- 李贺 (Li He)
+10- 杜牧 (Du Mu)
+11- 杜甫 (Du Fu)
+12- 王昌龄 (Wang Changling)
+13- 王维 (Wang Wei)
+14- 白居易 (Bai Juyi)
+15- 马戴 (Ma Dai)
+
