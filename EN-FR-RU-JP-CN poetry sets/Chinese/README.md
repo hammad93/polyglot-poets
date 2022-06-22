@@ -14,4 +14,3 @@ Authors:
 13- 王维 (Wang Wei)
 14- 白居易 (Bai Juyi)
 15- 马戴 (Ma Dai)
-
