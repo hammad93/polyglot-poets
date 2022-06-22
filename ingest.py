@@ -13,7 +13,7 @@ def ingest_lang(dir = ''):
         readme = file.readlines()
     
     # read in authors
-    authors = [' '.join(line.split(' ')[1:]).split(' (')[0] for line in readme[1:]]
+    authors = [' '.join(line.split(' ')[1:]).split(' (')[0].rstrip('\n') for line in readme[1:]]
 
     # grab each corpus
     lang = []
@@ -21,13 +21,11 @@ def ingest_lang(dir = ''):
         print(f'Ingesting {author} . . .')
         # list all poems by author
         poems = glob.glob(f'{dir}{author}/*.txt')
-        print(poems)
         # read in poetry
         poetry = []
         for poem_path in poems :
             # get title from path
             title = poem_path.split('/')[-1].split('.')[0]
-            print(f'Ingesting {title}')
             with open(poem_path, encoding = 'utf-8-sig') as poem :
                 poetry.append({
                     'title' : title,
@@ -40,3 +38,13 @@ def ingest_lang(dir = ''):
         })
     
     return lang
+
+def ingest_langs(langs = ['Chinese', 'English', 'French', 'Japanese', 'Russian']) :
+    '''
+    Using the git repository directory structure,
+    this will ingest the poetry
+    '''
+    return [{
+        'language' : lang,
+        'poetry' : ingest_lang(dir = f'EN-FR-RU-JP-CN poetry sets/{lang}/')
+    } for lang in langs]
